@@ -18,7 +18,7 @@ describe('Bubble Sort', function(){
 
 describe('Merge Sort', function(){
     it('is able to merge two sorted arrays', function(){
-        expect(mergeSort([1,2], [3,4])).toEqual([1,2,3,4]);
+        expect(merge([1,5,10], [2,3,4,6])).toEqual([1,2,3,4,5,6,10]);
     });
     it('is able to subdivide properly', function(){
       var rtn = splitArr([1,2,3,4,5]);

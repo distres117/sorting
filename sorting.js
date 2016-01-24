@@ -25,15 +25,16 @@ function swap(n1,n2){
 swap.timesRun = 0;
 bubbleSort.comparisons = 0;
 
-function mergeSort(arr1,arr2,rtn){
-  rtn = rtn || [];
-  if (rtn.length === 4)
-    return rtn;
-  if (arr1[0] > arr2[0])
-    rtn.push(arr2.shift());
-  else
-    rtn.push(arr1.shift());
-  return mergeSort(arr1, arr2, rtn);
+function merge(left,right){
+  var arr = [];
+  if (!left.length || !right.length)
+    return arr.concat( (!left.length ? right : left) );
+  if (left[0] > right[0])
+    arr.push(right.shift())
+  else 
+    arr.push(left.shift())
+  return arr.concat(merge(left, right));
+  
 
 }
 
